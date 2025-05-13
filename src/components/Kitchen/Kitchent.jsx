@@ -1,5 +1,5 @@
 import './Kitchen.css'
-import kitchenImmage from '../../assets/Faber.png'
+import kitchenImmage from '../../assets/faber.png'
 function Kitchent() {
   return (
     <div className='kitchen-container'>
