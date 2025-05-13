@@ -119,6 +119,12 @@
       min-height: auto;
       padding: unset;
     }
+    .faq-question {
+      font-size: 14px;
+    }
+    .faq-title{
+      margin-top: 3rem;
+    }
     .faq-left{
       margin: 0 2rem;
     }

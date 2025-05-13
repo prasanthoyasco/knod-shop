@@ -17,7 +17,7 @@ function FooterSection() {
           </div>
         </div>
 
-        <div className="col-md-8 links d-flex">
+        <div className="col-md-8 links-container">
           <div className="footer-section links">
           <h4 className='fs-2'>About</h4>
           <a href="#">About Us</a>

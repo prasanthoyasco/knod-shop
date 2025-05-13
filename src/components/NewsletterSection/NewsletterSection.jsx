@@ -6,7 +6,7 @@ export default function NewsletterSection() {
     <div className="newsletter-container">
       <h3 className="newsletter-subtitle">— Our Newsletter</h3>
       <h2 className="newsletter-title">
-        Subscribe to Our Newsletter to <br />
+        Subscribe to Our Newsletter to
         Get <span className="highlight">Update on Our Latest Offers</span>
       </h2>
       <p className="newsletter-description">
