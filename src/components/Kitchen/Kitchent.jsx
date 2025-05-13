@@ -1,6 +1,6 @@
 import React from 'react'
 import './Kitchen.css'
-import kitchenImmage from '../../assets/faber.png'
+import kitchenImmage from '../../assets/Faber.png'
 function Kitchent() {
   return (
     <div className='kitchen-container'>
