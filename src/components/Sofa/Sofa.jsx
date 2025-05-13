@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sofa.css";
-import sofa from "../../assets/craft.png";
+import sofa from "../../assets/Craft.png";
 function Sofa() {
   return (
     <div className="sofa-container">
