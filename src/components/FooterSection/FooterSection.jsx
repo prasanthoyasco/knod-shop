@@ -38,7 +38,7 @@ function FooterSection() {
           <a href="#">FAQ’s</a>
         </div>
 
-        <div className="footer-section contact">
+        <div className="footer-section contacts">
           <h4 className='fs-2'>Contact Info</h4>
           <a href="/"><i className="bi bi-telephone"></i> +91 93605 95366</a>
           <a href="/"><i className="bi bi-telephone"></i> +91 70924 66600</a>
