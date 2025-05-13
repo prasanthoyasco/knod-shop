@@ -1,5 +1,5 @@
 import './AboutMainContent.css'
-import aboutImage1 from '../../assets/plywood.png'
+import aboutImage1 from '../../assets/Plywood.png'
 function AboutMainContent() {
   return (
     <div className='About-Main-Content-Container my-5'>
