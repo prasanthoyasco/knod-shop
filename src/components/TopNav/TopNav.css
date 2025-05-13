@@ -1,0 +1,27 @@
+.top-banner-badge p{
+margin-bottom:0rem !important;
+}
+.discount-info p a{
+    font-weight: 700;
+}
+.contact span ,.discount-info span{
+    font-weight: 700;
+}
+.icon-fb,.icon-ig{
+height: 30px;
+width: 30px;
+border-radius: 50%;
+background-color: #AB7B53;
+color: #fff;
+}
+.top-banner-badge div p{
+    color:#fff;
+}
+@media (max-width:780px){
+    .contact,.social-icon {
+        display: none !important;
+    }
+    .top-banner-badge div p {
+    font-size: x-small;
+    }
+}

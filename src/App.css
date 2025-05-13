@@ -1,0 +1,36 @@
+
+#root {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+body{
+    background-color: #FFFFFF;
+}
+
+h1,h2,h3,h4,h5,h6,p,span{
+   font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --color-primary: #AB7B53;   
+  --color-secondary: #E2AA7CC9;
+  --color-accent: #AB5F1D;   
+  --color-secondary-bg: #F0F0F0;  
+  --color-primary-bg: #ffffff;  
+}
+
+/* p{
+  margin-bottom: 0rem !important;
+} */
+a{
+  color: var(--color-accent);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary-bg);
+}
+.bg-black{
+  background-color: #222222;
+}

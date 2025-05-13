@@ -1,0 +1,56 @@
+.kitchen-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+    padding: 1rem 5rem;
+    margin-top: 5%;
+}
+
+.kitchen-content {
+    width: 45%;
+}
+
+.kitchen-content p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.kitchen-content button {
+    background-color:  #B07D51;
+    margin-top: 20px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 40px;
+}
+
+.kitchen-image {
+    border-radius: 20px;
+    width: 50%; 
+    height: auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .kitchen-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .kitchen-content {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .kitchen-image {
+        height: auto;
+        width: 100%;
+    }
+
+    .kitchen-content button {
+        width: 100%;
+        max-width: 200px;
+    }
+}

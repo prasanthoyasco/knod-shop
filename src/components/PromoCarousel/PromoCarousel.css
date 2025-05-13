@@ -1,0 +1,101 @@
+.promo-carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  position: relative; /* Ensure context for absolute positioning */
+}
+
+.promo-carousel .swiper {
+  padding-bottom: 60px; /* Space for pagination */
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  z-index: 20; /* Ensure above slides */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto; /* Allow interaction */
+}
+
+.swiper-pagination-bullet {
+  background-color: #e7d7c8;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px !important;
+  border-radius: 50%;
+  cursor: pointer; /* Indicates clickable */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #B07D51;
+}
+
+.promo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  padding: 40px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; /* BELOW pagination */
+}
+
+.promo-content {
+  max-width: 50%;
+}
+
+.promo-title {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.promo-heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.promo-description {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: inherit;
+}
+
+.promo-button {
+  padding: 10px 16px;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.promo-button:hover {
+  opacity: 0.8;
+}
+
+.promo-image {
+  position: relative;
+  right: -3rem;
+  height: inherit;
+  object-fit: contain;
+}
+
+@media (max-width: 500px) {
+    .promo-card {
+        height: auto !important;
+    }
+    .promo-button {
+        font-size: 12px !important;
+    }
+}

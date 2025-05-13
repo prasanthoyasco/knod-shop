@@ -1,0 +1,74 @@
+.plywood-text-container{
+    width:50%;
+}
+.plywood-text-container .top{
+    font-size: 14px !important;
+    margin-bottom: .5rem !important;
+}
+.plywood-text-container button{
+    background-color:  #B07D51;
+    margin-top: 20px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 40px;
+
+}
+.About-Main-Content-Container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+    margin: auto 3rem;
+}
+
+.About-Main-Content-Container p {
+    width: 80%;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-main-content-image {
+    border-radius: 20px;
+    width: 50%; 
+    height: auto; 
+}
+
+
+@media (max-width: 768px) {
+    .About-Main-Content-Container {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 1rem !important;
+        margin: unset !important;
+    }
+    .plywood-text-container{
+        width: 100%;
+    }
+    .about-main-content-image{
+        width: 100%;
+        margin-top: 5%;
+    }
+    .About-Main-Content-Container p {
+        width: 100%;
+        font-size: 18px; 
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .About-Main-Content-Container p {
+        font-size: 16px; 
+        padding: 15px;
+        width: 100%;
+    }
+    .about-main-content-image {
+        border-radius: 20px;
+        width: 100%; 
+        height: auto; 
+    }
+    .plywood-text-container{
+        width:100%;
+        margin-bottom: 2rem;
+    }
+}

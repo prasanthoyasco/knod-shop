@@ -1,0 +1,58 @@
+.trust-section {
+  padding: 3rem 3rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.trust-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.trust-boxes {
+  display: flex;
+  overflow-x: auto;
+  gap: 2.5rem;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  cursor: grab;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.trust-boxes::-webkit-scrollbar {
+  display: none;
+}
+
+.trust-boxes.active {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.trust-box {
+  width: 270px;
+  flex-shrink: 0;
+  background: #fff;
+  border: 1px solid #CCCCCC;
+  padding: 3.5rem 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trust-box:hover {
+  transform: translateY(-8px);
+  border: 1px solid #B07D51;
+}
+
+.trust-box h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.fs-1 {
+  font-weight: 700;
+}

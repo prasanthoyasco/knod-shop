@@ -1,0 +1,134 @@
+.faq-container {
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+        padding: 0rem 2rem;
+    background-color: white;
+    margin-bottom: 3rem;
+  }
+  
+  .faq-left {
+    margin-right: 2rem;
+    width: 700px;
+  }
+  .faq-answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 0;
+}
+
+.faq-answer-wrapper.open {
+  max-height: 200px; /* Adjust based on expected answer length */
+  padding: 10px 0;
+}
+
+.faq-answer {
+  margin: 0;
+}
+
+  
+  .faq-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .faq-subtitle {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .faq-item {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+  }
+  
+  .faq-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-question {
+    display: flex;
+    font-size: 18px;
+    justify-content: space-between;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .faq-answer {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #555;
+  }
+  
+  .faq-toggle {
+    font-size: 1.25rem;
+  }
+  
+  .faq-right {
+    background-color: #c6845d;
+    color: white;
+    padding: 4rem;
+    height: 100%;
+    width: 400px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .faq-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .faq-right-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .faq-right-text {
+    font-size: 0.85rem;
+    margin-bottom: 1rem !important;
+  }
+  
+  .faq-contact-button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-contact-button:hover {
+    background-color: #333;
+  }
+  
+  @media (max-width: 480px) {
+    .faq-container{
+      min-height: auto;
+      padding: unset;
+    }
+    .faq-left{
+      margin: 0 2rem;
+    }
+    .faq-right{
+     margin: 0 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .faq-container{
+      min-height: auto;
+    }
+  }
