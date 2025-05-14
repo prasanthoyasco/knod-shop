@@ -8,7 +8,6 @@ import {
   AiOutlineMenu,
   AiOutlineClose,
 } from "react-icons/ai";
-import { LuMenu } from "react-icons/lu";
 import "./Navbar.css";
 
 export function Navbar() {
@@ -19,10 +18,25 @@ export function Navbar() {
   const cartCount = 0;
   const wishlistCount = 0;
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const isMobile = window.innerWidth <= 768;
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+    setShowProducts(false);
+    setShowPopular(false);
+  };
+
+  const handleDropdownClick = (dropdownType) => {
+    if (dropdownType === "products") {
+      setShowProducts((prev) => !prev);
+      setShowPopular(false);
+    } else if (dropdownType === "popular") {
+      setShowPopular((prev) => !prev);
+      setShowProducts(false);
+    }
+  };
 
   return (
-   <>
     <header className="header-nav">
       <a href="/" className="logo">
         <img src={logo} alt="knobs shop" />
@@ -32,18 +46,19 @@ export function Navbar() {
         <nav className={`navbar ${menuOpen ? "navbar-mobile-active" : ""}`}>
           <a href="/">Home</a>
 
+          {/* Products Dropdown */}
           <div
             className="nav-dropdown"
-            onMouseEnter={() => setShowProducts(true)}
-            onMouseLeave={() => setShowProducts(false)}
-            onClick={() => setShowProducts(!showProducts)}
+            onMouseEnter={() => !isMobile && setShowProducts(true)}
+            onMouseLeave={() => !isMobile && setShowProducts(false)}
+            onClick={() => isMobile && handleDropdownClick("products")}
           >
-            <a className="nav-link">
-              Products   
+            <span className="nav-link">
+              Products
               <span className={`arrow-icon ${showProducts ? "rotate-up" : ""}`}>
                 <IoIosArrowDown />
               </span>
-            </a>
+            </span>
             {showProducts && (
               <div className="dropdown-menu">
                 <a href="/products/rings">Rings</a>
@@ -53,18 +68,19 @@ export function Navbar() {
             )}
           </div>
 
+          {/* Popular Dropdown */}
           <div
             className="nav-dropdown"
-            onMouseEnter={() => setShowPopular(true)}
-            onMouseLeave={() => setShowPopular(false)}
-            onClick={() => setShowPopular(!showPopular)}
+            onMouseEnter={() => !isMobile && setShowPopular(true)}
+            onMouseLeave={() => !isMobile && setShowPopular(false)}
+            onClick={() => isMobile && handleDropdownClick("popular")}
           >
-            <a className="nav-link">
-              Popular 
+            <span className="nav-link">
+              Popular
               <span className={`arrow-icon ${showPopular ? "rotate-up" : ""}`}>
                 <IoIosArrowDown />
               </span>
-            </a>
+            </span>
             {showPopular && (
               <div className="dropdown-menu">
                 <a href="/popular/new-arrivals">New Arrivals</a>
@@ -77,26 +93,27 @@ export function Navbar() {
           <a href="/">Contact Us</a>
         </nav>
 
-   <div className="nav-icons">
-  <div className="icon-wrapper">
-    <AiOutlineHeart className="nav-icon" />
-    <span className="icon-count">{wishlistCount}</span>
-  </div>
-  <div className="icon-wrapper">
-    <AiOutlineShoppingCart className="nav-icon" />
-    <span className="icon-count">{cartCount}</span>
-  </div>
-  <div className="icon-wrapper">
-    <AiOutlineUser className="nav-icon" />
-  </div>
-  <div className="hamburger-icon icon-wrapper" onClick={toggleMenu}>
-    {menuOpen ? <AiOutlineClose className="nav-icon" /> : <AiOutlineMenu  className="nav-icon"/>}
-  </div>
-</div>
-
+        <div className="nav-icons">
+          <div className="icon-wrapper">
+            <AiOutlineHeart className="nav-icon" />
+            <span className="icon-count">{wishlistCount}</span>
+          </div>
+          <div className="icon-wrapper">
+            <AiOutlineShoppingCart className="nav-icon" />
+            <span className="icon-count">{cartCount}</span>
+          </div>
+          <div className="icon-wrapper">
+            <AiOutlineUser className="nav-icon" />
+          </div>
+          <div className="hamburger-icon icon-wrapper" onClick={toggleMenu}>
+            {menuOpen ? (
+              <AiOutlineClose className="nav-icon" />
+            ) : (
+              <AiOutlineMenu className="nav-icon" />
+            )}
+          </div>
+        </div>
       </div>
     </header>
-
-    </>
   );
 }
