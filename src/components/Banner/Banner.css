@@ -168,6 +168,11 @@ color: black;
     background-color: #444;
     height: 30px;
 }
+.search-icon {
+  font-size: 48px;
+  color: #333;
+  height: fit-content;
+}
 
 /* animation */
 @keyframes fadeInUp {
@@ -205,6 +210,9 @@ color: black;
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .search-icon {
+    font-size: 36px;
+  }
   .navbar{
         top: 70% !important;
         right: 0;
@@ -245,16 +253,41 @@ color: black;
   .banner-search-box .btn {
     padding: 10px 25px;
   }
+  .banner-search-input,
+  .banner-search-select {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .banner-search-input::placeholder,
+  .banner-search-select::placeholder {
+    font-size: 0.75rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .search-icon {
+    font-size: 28px;
+  }
   .banner-search-box {
     width: 80%;
-    top: 90%;
+    top: 94%;
+  }
+   .banner-search-input,
+  .banner-search-select {
+    padding: 0.2rem 0.3rem;
+    font-size: 0.75rem;
+  }
+
+  .banner-search-input::placeholder,
+  .banner-search-select::placeholder {
+    font-size: 0.7rem;
   }
 
   .banner-search-box .btn {
-    padding: 8px 20px;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    font-size: 0.75rem;
   }
 
   .carousel-caption {

@@ -88,9 +88,13 @@
         overflow-x: clip;
         width: 100%;
     }
+    .testimonial-nav{
+      background-color: #41414185;
+    }
     
     .testimonial-content p {
         font-size: 1rem !important;
+        margin: 1rem auto;
     }
     .testimonial-wrapper {
         padding: 2rem 0rem !important;

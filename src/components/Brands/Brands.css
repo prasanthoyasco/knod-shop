@@ -18,9 +18,6 @@
   animation: scroll-left 30s linear infinite;
 }
 
-.marquee.reverse .marquee-track {
-  animation: scroll-right 30s linear infinite;
-}
 
 .brand-logo {
   display: flex;
@@ -33,7 +30,15 @@
   width: auto;
   object-fit: contain;
 }
-
+.all-brand{
+  color: white;
+    background: #000;
+    transition: 0.5s ease-in-out;
+}
+.all-brand:hover{
+   background: transparent;
+   color: #000;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .brand-logo {
@@ -43,6 +48,10 @@
   .brand-logo img {
     max-height: 40px;
   }
+  .marquee-track {
+  display: flex;
+  animation-duration: 10s; /* or whatever speed you want */
+}
 }
 
 /* Keyframe animations */
@@ -55,14 +64,6 @@
   }
 }
 
-@keyframes scroll-right {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(50%);
-  }
-}
 
 .marquee:hover .marquee-track {
   animation-play-state: paused;

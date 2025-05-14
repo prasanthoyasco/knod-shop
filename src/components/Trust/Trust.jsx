@@ -29,16 +29,21 @@ export const Trust = () => {
     const card = slider.querySelector(".trust-box");
     if (!slider || !card) return;
 
-    const cardWidth = card.offsetWidth + 40; // width + gap
+   const gap = parseInt(getComputedStyle(slider).gap || 40); // fallback if undefined
+const cardWidth = card.offsetWidth + gap;
 
-    const scroll = () => {
-      if (isHovered || isDragging.current) return;
-      if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth) {
-        slider.scrollTo({ left: 0, behavior: "auto" });
-      } else {
-        slider.scrollBy({ left: cardWidth, behavior: "smooth" });
-      }
-    };
+const isMobile = window.innerWidth <= 768;
+const scrollAmount = isMobile ? cardWidth * 2 : cardWidth; // scroll 2 boxes on mobile
+
+const scroll = () => {
+  if (isHovered || isDragging.current) return;
+  if (slider.scrollLeft >= slider.scrollWidth - slider.offsetWidth) {
+    slider.scrollTo({ left: 0, behavior: "auto" });
+  } else {
+    slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  }
+};
+
 
     intervalRef.current = setInterval(scroll, 3000);
 

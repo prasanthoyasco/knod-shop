@@ -44,6 +44,7 @@
   scroll-snap-align: start;
   background-color: #f5f5f5;
   cursor: pointer;
+  filter: drop-shadow(0 4px 10px rgba(146, 146, 146, 0.3));
   transition: transform 0.3s ease;
 }
 

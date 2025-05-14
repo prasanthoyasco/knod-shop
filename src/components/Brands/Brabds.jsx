@@ -33,7 +33,7 @@ function Brands() {
           ))}
         </div>
       </div>
-        <button className='p-3 mt-4 sale-button'>BOOK CONSULTATION</button>
+        <button className='py-3 px-5 mt-4 all-brand'>See all Brands</button>
       {/* Second row, reverse direction */}
       {/* <div className="marquee reverse">
         <div className="marquee-track">

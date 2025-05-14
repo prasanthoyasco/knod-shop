@@ -5,19 +5,22 @@
 }
 
 .trust-section h2 {
-  font-size: 2.2rem;
+  font-size: 2.2rem !important;
   margin-bottom: 2rem;
   font-weight: bold;
-  color: #222;
+  color: #3f3f3f;
 }
 
 .trust-boxes {
   display: flex;
+  max-width: 1200px;
+   margin: 0 auto;
   overflow-x: auto;
   gap: 2.5rem;
   scroll-behavior: smooth;
   padding-bottom: 1rem;
-  cursor: grab;
+  padding-top: 1rem;
+  cursor: pointer;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -27,7 +30,7 @@
 }
 
 .trust-boxes.active {
-  cursor: grabbing;
+  cursor: pointer;
   user-select: none;
 }
 
@@ -36,13 +39,15 @@
   flex-shrink: 0;
   background: #fff;
   border: 1px solid #CCCCCC;
-  padding: 3.5rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   border-radius: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: drop-shadow(0 4px 10px rgba(146, 146, 146, 0.1));
 }
 
-.trust-box:hover {
-  transform: translateY(-8px);
+.trust-box:hover {  
+  background-color: #fff0e4c9;
+    transform: translateY(-4px);
   border: 1px solid #B07D51;
 }
 
@@ -55,4 +60,32 @@
 
 .fs-1 {
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .trust-section {
+    padding: 3rem 0.5rem;
+  }
+
+  .trust-boxes {
+    gap: 0.5rem !important;
+  }
+
+  .trust-box {
+    width: calc(50% - 0.5rem);
+    padding: 1rem 0.5rem;
+  }
+
+  .trust-box h5 {
+    font-size: 0.9rem !important;
+  }
+
+  .trust-box img {
+    height: 60px;
+    opacity: 0.8;
+  }
+
+  .trust-section h2 {
+    font-size: 1.2rem !important;
+  }
 }

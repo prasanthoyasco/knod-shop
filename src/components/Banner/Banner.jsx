@@ -30,7 +30,7 @@ export function Banner() {
       {/* search box */}
       <div className="banner-search-box bg-white">
         <div className="d-flex justify-content-between align-items-center">
-          <IoSearch style={{ fontSize: "48px", height: "fit-content", color: '#333' }} className="ps-2" />
+          <IoSearch className="search-icon ps-2" />
           <input
             type="text"
             className="form-control banner-search-input"
@@ -40,7 +40,8 @@ export function Banner() {
         </div>
       </div>
 
-      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel" data-bs-interval="3500" data-bs-pause="false"
+>
         {/* Numbered Indicators */}
         <div className="carousel-indicators numbered-indicators">
           {slides.map((_, idx) => (
