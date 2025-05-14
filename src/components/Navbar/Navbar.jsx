@@ -38,82 +38,81 @@ export function Navbar() {
 
   return (
     <header className="header-nav">
-      <a href="/" className="logo">
-        <img src={logo} alt="knobs shop" />
-      </a>
+  <a href="/" className="logo">
+    <img src={logo} alt="knobs shop" />
+  </a>
 
-      <div className="d-flex gap-4">
-        <nav className={`navbar ${menuOpen ? "navbar-mobile-active" : ""}`}>
-          <a href="/">Home</a>
+  <div className="nav-content-wrapper">
+    <nav className={`navbar ${menuOpen ? "navbar-mobile-active" : ""}`}>
+      <a href="/">Home</a>
 
-          {/* Products Dropdown */}
-          <div
-            className="nav-dropdown"
-            onMouseEnter={() => !isMobile && setShowProducts(true)}
-            onMouseLeave={() => !isMobile && setShowProducts(false)}
-            onClick={() => isMobile && handleDropdownClick("products")}
-          >
-            <span className="nav-link">
-              Products
-              <span className={`arrow-icon ${showProducts ? "rotate-up" : ""}`}>
-                <IoIosArrowDown />
-              </span>
-            </span>
-            {showProducts && (
-              <div className="dropdown-menu">
-                <a href="/products/rings">Rings</a>
-                <a href="/products/chains">Chains</a>
-                <a href="/products/bracelets">Bracelets</a>
-              </div>
-            )}
+      <div
+        className="nav-dropdown"
+        onMouseEnter={() => !isMobile && setShowProducts(true)}
+        onMouseLeave={() => !isMobile && setShowProducts(false)}
+        onClick={() => isMobile && handleDropdownClick("products")}
+      >
+        <span className="nav-link">
+          Products
+          <span className={`arrow-icon ${showProducts ? "rotate-up" : ""}`}>
+            <IoIosArrowDown />
+          </span>
+        </span>
+        {showProducts && (
+          <div className="dropdown-menu">
+            <a href="/products/rings">Rings</a>
+            <a href="/products/chains">Chains</a>
+            <a href="/products/bracelets">Bracelets</a>
           </div>
-
-          {/* Popular Dropdown */}
-          <div
-            className="nav-dropdown"
-            onMouseEnter={() => !isMobile && setShowPopular(true)}
-            onMouseLeave={() => !isMobile && setShowPopular(false)}
-            onClick={() => isMobile && handleDropdownClick("popular")}
-          >
-            <span className="nav-link">
-              Popular
-              <span className={`arrow-icon ${showPopular ? "rotate-up" : ""}`}>
-                <IoIosArrowDown />
-              </span>
-            </span>
-            {showPopular && (
-              <div className="dropdown-menu">
-                <a href="/popular/new-arrivals">New Arrivals</a>
-                <a href="/popular/trending">Trending Now</a>
-              </div>
-            )}
-          </div>
-
-          <a href="/">About Us</a>
-          <a href="/">Contact Us</a>
-        </nav>
-
-        <div className="nav-icons">
-          <div className="icon-wrapper">
-            <AiOutlineHeart className="nav-icon" />
-            <span className="icon-count">{wishlistCount}</span>
-          </div>
-          <div className="icon-wrapper">
-            <AiOutlineShoppingCart className="nav-icon" />
-            <span className="icon-count">{cartCount}</span>
-          </div>
-          <div className="icon-wrapper">
-            <AiOutlineUser className="nav-icon" />
-          </div>
-          <div className="hamburger-icon icon-wrapper" onClick={toggleMenu}>
-            {menuOpen ? (
-              <AiOutlineClose className="nav-icon" />
-            ) : (
-              <AiOutlineMenu className="nav-icon" />
-            )}
-          </div>
-        </div>
+        )}
       </div>
-    </header>
+
+      <div
+        className="nav-dropdown"
+        onMouseEnter={() => !isMobile && setShowPopular(true)}
+        onMouseLeave={() => !isMobile && setShowPopular(false)}
+        onClick={() => isMobile && handleDropdownClick("popular")}
+      >
+        <span className="nav-link">
+          Popular
+          <span className={`arrow-icon ${showPopular ? "rotate-up" : ""}`}>
+            <IoIosArrowDown />
+          </span>
+        </span>
+        {showPopular && (
+          <div className="dropdown-menu">
+            <a href="/popular/new-arrivals">New Arrivals</a>
+            <a href="/popular/trending">Trending Now</a>
+          </div>
+        )}
+      </div>
+
+      <a href="/">About Us</a>
+      <a href="/">Contact Us</a>
+    </nav>
+  </div>
+  
+   <div className="nav-icons">
+      <div className="icon-wrapper">
+        <AiOutlineHeart className="nav-icon" />
+        <span className="icon-count">{wishlistCount}</span>
+      </div>
+      <div className="icon-wrapper">
+        <AiOutlineShoppingCart className="nav-icon" />
+        <span className="icon-count">{cartCount}</span>
+      </div>
+      <div className="icon-wrapper">
+        <AiOutlineUser className="nav-icon" />
+      </div>
+      <div className="hamburger-icon icon-wrapper" onClick={toggleMenu}>
+        {menuOpen ? (
+          <AiOutlineClose className="nav-icon" />
+        ) : (
+          <AiOutlineMenu className="nav-icon" />
+        )}
+      </div>
+    </div>
+</header>
+
   );
 }

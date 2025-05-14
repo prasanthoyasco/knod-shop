@@ -1,21 +1,21 @@
 .header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: transparent;
   position: absolute;
   top: 50px;
   left: 0;
   width: 100%;
-  padding: 20px 5%;
-  background: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   z-index: 100;
-  flex-wrap: wrap;
 }
 
 /* Desktop Nav */
 .navbar {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
 }
 
 /* Nav links */
@@ -25,7 +25,6 @@
   font-size: 16px;
   color: #444;
   font-weight: 500;
-  margin-left: 40px;
   text-decoration: none;
   transition: 0.3s ease-in-out;
 }
@@ -205,7 +204,6 @@
 
   .hamburger-icon {
     color: #8D4F1B;
-    margin-left: auto;
   }
 
   .navbar {
@@ -237,7 +235,7 @@
 
 .nav-dropdown {
     position: relative; /* Add this so the dropdown is positioned relative to this container */
-    width: 100%;
+    /* width: 100%; */
     margin-left: 0;
   }
 
@@ -264,3 +262,8 @@
   background-color: #f3dbca;
 }
   
+.nav-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
