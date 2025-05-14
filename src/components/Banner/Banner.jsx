@@ -1,6 +1,7 @@
 import banner1 from "../../assets/banner1.png";
 import banner2 from "../../assets/banner2.jpg";
 import banner3 from "../../assets/banner3.png";
+import * as bootstrap from 'bootstrap';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -46,6 +47,13 @@ export function Banner() {
     };
 
     carousel.addEventListener("slid.bs.carousel", handleSlideChange);
+    const isMobile = window.innerWidth < 768;
+  if (isMobile) {
+    setTimeout(() => {
+      const carouselInstance = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
+      carouselInstance.next(); // Trigger next slide to activate auto-slide
+    }, 1500); // Adjust delay as needed
+  }
 
     return () => {
       carousel.removeEventListener("slid.bs.carousel", handleSlideChange);
