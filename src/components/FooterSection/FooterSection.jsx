@@ -5,7 +5,7 @@ function FooterSection() {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section brand col-md-4">
-          <div className="logo"><img src={logo} alt="logo" /></div>
+          <div className="footer-logo"><img src={logo} alt="logo" /></div>
           <p className="description">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
             has been the industry's standard dummy text ever since the 1500s.

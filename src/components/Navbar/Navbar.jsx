@@ -8,6 +8,7 @@ import {
   AiOutlineMenu,
   AiOutlineClose,
 } from "react-icons/ai";
+import { LuMenu } from "react-icons/lu";
 import "./Navbar.css";
 
 export function Navbar() {
@@ -76,22 +77,23 @@ export function Navbar() {
           <a href="/">Contact Us</a>
         </nav>
 
-        <div className="nav-icons">
-          <div className="icon-wrapper">
-            <AiOutlineHeart className="nav-icon" />
-            <span className="icon-count">{wishlistCount}</span>
-          </div>
-          <div className="icon-wrapper">
-            <AiOutlineShoppingCart className="nav-icon" />
-            <span className="icon-count">{cartCount}</span>
-          </div>
-          <div className="icon-wrapper">
-            <AiOutlineUser className="nav-icon" />
-          </div>
-          <div className="hamburger-icon" onClick={toggleMenu}>
-            {menuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-          </div>
-        </div>
+   <div className="nav-icons">
+  <div className="icon-wrapper">
+    <AiOutlineHeart className="nav-icon" />
+    <span className="icon-count">{wishlistCount}</span>
+  </div>
+  <div className="icon-wrapper">
+    <AiOutlineShoppingCart className="nav-icon" />
+    <span className="icon-count">{cartCount}</span>
+  </div>
+  <div className="icon-wrapper">
+    <AiOutlineUser className="nav-icon" />
+  </div>
+  <div className="hamburger-icon icon-wrapper" onClick={toggleMenu}>
+    {menuOpen ? <AiOutlineClose className="nav-icon" /> : <AiOutlineMenu  className="nav-icon"/>}
+  </div>
+</div>
+
       </div>
     </header>
 

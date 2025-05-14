@@ -1,3 +1,7 @@
+.top-banner-badge{
+    background-color: rgb(71, 71, 71);
+}
+
 .top-banner-badge p{
 margin-bottom:0rem !important;
 }
@@ -17,11 +21,42 @@ color: #fff;
 .top-banner-badge div p{
     color:#fff;
 }
+.search-box {
+    border-radius: 50px;
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    background-color: #ececec;
+}
+.search-box-inner{
+    display: flex;
+}
+.search-box-inner input{
+    background-color: #ececec;
+    width: 100%;
+}
+@media (min-width:780px){
+.search-box{
+    display: none;
+}
+}
 @media (max-width:780px){
-    .contact,.social-icon {
+    .contact,.social-icon,.discount-info{
         display: none !important;
     }
     .top-banner-badge div p {
     font-size: x-small;
     }
+}
+@media (max-width: 480px) {
+   .search-box .banner-search-input, .banner-search-select {
+        padding: 0.2rem 0.3rem;
+        font-size: 0.75rem;
+        margin-left: 10px;
+    }
+    .search-box .search-icon {
+    margin-right: 10px;
+  }
 }

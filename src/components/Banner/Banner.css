@@ -270,6 +270,7 @@ color: black;
     font-size: 28px;
   }
   .banner-search-box {
+    display: none;
     width: 80%;
     top: 94%;
   }
