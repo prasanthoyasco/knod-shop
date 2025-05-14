@@ -207,7 +207,7 @@ color: black;
   animation-delay: 0.8s;
 }
 .carousel-item {
-  transition: transform 1.5s ease-in-out !important; /* Default is 0.6s */
+  transition: transform 0.6s ease-in-out !important; /* Default is 0.6s */
 }
 
 /* Responsive Styles */
