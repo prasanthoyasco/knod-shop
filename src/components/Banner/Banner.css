@@ -2,6 +2,7 @@
     height: 100vh !important;
     object-fit: cover;
 }
+@media (min-width: 768px) {
 .carousel-indicators {
     position: absolute;
     right: 0;
@@ -25,6 +26,7 @@
     border-radius: 50%;
     width: 30px;
     text-indent: 0px;
+}
 }
 .numbered-indicators button.active {
   background-color: #8D4F1B;
@@ -213,19 +215,12 @@ color: black;
   .search-icon {
     font-size: 36px;
   }
-  .navbar{
-        top: 70% !important;
-        right: 0;
-        width: 70%;
-        border-radius: 10px;
+  .dot-indicators button.active{
+    background-color: #8D4F1B !important;
   }
-.navbar.navbar-mobile-active {
-  left: auto;
-  display: flex;
-  background-color: rgba(245, 245, 245, 0.7); /* light transparent */
-  backdrop-filter: blur(10px); /* apply blur */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-}
+  .dot-indicators button{
+    background-color: #f8e8da !important;
+  }
 
   .numbered-indicators button{
     display: none !important;

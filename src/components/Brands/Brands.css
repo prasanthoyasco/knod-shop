@@ -33,6 +33,7 @@
 .all-brand{
   color: white;
     background: #000;
+    box-shadow: 0 6px 10px rgba(167, 167, 167, 0.5);
     transition: 0.5s ease-in-out;
 }
 .all-brand:hover{

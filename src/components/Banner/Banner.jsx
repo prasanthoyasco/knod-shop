@@ -4,7 +4,9 @@ import banner3 from "../../assets/banner3.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "./Banner.css";
+import { useEffect } from "react";
 
 const slides = [
   {
@@ -25,6 +27,30 @@ const slides = [
 ];
 
 export function Banner() {
+  useEffect(() => {
+    const carousel = document.getElementById("carouselExampleIndicators");
+
+    const handleSlideChange = () => {
+      const activeIndex = Array.from(
+        carousel.querySelectorAll(".carousel-item")
+      ).findIndex((item) => item.classList.contains("active"));
+
+      const updateIndicators = (selector) => {
+        const buttons = carousel.querySelectorAll(selector);
+        buttons.forEach((btn, idx) => {
+          btn.classList.toggle("active", idx === activeIndex);
+        });
+      };
+
+      updateIndicators(".dot-indicators button");
+    };
+
+    carousel.addEventListener("slid.bs.carousel", handleSlideChange);
+
+    return () => {
+      carousel.removeEventListener("slid.bs.carousel", handleSlideChange);
+    };
+  }, []);
   return (
     <div className="position-relative">
       {/* search box */}
@@ -80,6 +106,21 @@ export function Banner() {
             </div>
           ))}
         </div>
+        {/* Dot Indicators for Mobile */}
+<div className="carousel-indicators dot-indicators d-md-none">
+  {slides.map((_, idx) => (
+    <button
+      key={idx}
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to={idx}
+      className={idx === 0 ? "active" : ""}
+      aria-current={idx === 0 ? "true" : undefined}
+      aria-label={`Slide ${idx + 1}`}
+    />
+  ))}
+</div>
+
       </div>
     </div>
   );

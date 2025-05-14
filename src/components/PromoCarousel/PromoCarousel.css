@@ -79,6 +79,7 @@
   border-radius: 50px;
   font-size: 14px;
   cursor: pointer;
+  box-shadow: 0 6px 10px rgba(146, 146, 146, 0.281);
   transition: opacity 0.3s ease;
 }
 
@@ -98,6 +99,6 @@
         height: auto !important;
     }
     .promo-button {
-        font-size: 12px !important;
+        font-size: 11px !important;
     }
 }

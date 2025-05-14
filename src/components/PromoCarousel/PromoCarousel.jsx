@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination ,Autoplay} from 'swiper/modules'; // ← Import this
 import 'swiper/css';
 import 'swiper/css/pagination'; // ← Add this
+import { IoIosArrowRoundForward } from "react-icons/io";
 import './PromoCarousel.css';
 import cabinat from '../../assets/cabinet.png'
 import promoChair from '../../assets/promo-chair.png'
@@ -71,7 +72,7 @@ const PromoCarousel = () => {
                   className="promo-button"
                   style={{ backgroundColor: item.buttonColor }}
                 >
-                  Shop now →
+                  Shop now<IoIosArrowRoundForward size={"18px"} />
                 </button>
               </div>
               <img src={item.image} alt={item.heading} className="promo-image" />

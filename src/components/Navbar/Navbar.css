@@ -55,7 +55,7 @@
 .nav-icons {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .icon-wrapper {
@@ -74,23 +74,27 @@
 }
 
 .icon-count {
-  position: absolute;
-  top: -4px;
-  right: -8px;
-  background: #222222;
-  color: white;
-  font-size: 10px;
-  padding: 2px 5px;
-  border-radius: 50%;
-  font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    background: #222222;
+    color: white;
+    font-size: 8px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-weight: bold;
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
   .header-nav {
+    position: relative;
     align-items: flex-start;
+    padding: 10px 5% !important;
     top: auto;
   }
+  .nav-icon {
+  font-size: 20px;
+}
 .icon-count{
   display: none;
 }
@@ -127,6 +131,7 @@
 
   .nav-icons {
     width: 100%;
+      gap: 10px;
     justify-content: space-between;
     margin-top: 10px;
   }
@@ -176,10 +181,23 @@
     justify-content: space-between;
   }
 
+    .navbar{
+        top: 70% !important;
+        right: 0;
+        width: 70%;
+        border-radius: 10px;
+  }
+.navbar.navbar-mobile-active {
+  left: auto;
+  display: flex;
+  background-color: rgba(245, 245, 245, 0.7); /* light transparent */
+  backdrop-filter: blur(10px); /* apply blur */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
   .nav-icons {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     margin-top: 0;
     justify-content: flex-end;
     flex: 1;
@@ -241,3 +259,4 @@
 .dropdown-menu a:hover {
   background-color: #f3dbca;
 }
+  

@@ -1,5 +1,5 @@
 .top-banner-badge{
-    background-color: rgb(71, 71, 71);
+    background-color: rgb(0, 0, 0);
 }
 
 .top-banner-badge p{
@@ -28,16 +28,22 @@ color: #fff;
     justify-content: space-between;
     align-items: center;
     display: flex;
-    background-color: #ececec;
+    background-color: #ffffff;
+}
+.search-box .search-icon{
+    color: #8D4F1B;
+}
+.search-box .banner-search-input::placeholder{
+    color: #8D4F1B;
 }
 .search-box-inner{
     display: flex;
 }
 .search-box-inner input{
-    background-color: #ececec;
+    background-color: #ffffff;
     width: 100%;
 }
-@media (min-width:780px){
+@media (min-width:480px){
 .search-box{
     display: none;
 }
@@ -45,6 +51,14 @@ color: #fff;
 @media (max-width:780px){
     .contact,.social-icon,.discount-info{
         display: none !important;
+    }
+    .top-banner-badge{
+        background-color: rgb(255 255 255);
+        padding-right: 1rem !important;
+    padding-left: 1rem !important;
+    }
+    .search-box{
+        border: 1px solid #8D4F1B;
     }
     .top-banner-badge div p {
     font-size: x-small;
